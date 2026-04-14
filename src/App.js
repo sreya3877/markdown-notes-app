@@ -23,7 +23,7 @@ function App() {
   }, [loggedIn]);
 
   const fetchNotes = async () => {
-    const res = await axios.get("http://localhost:5000/notes");
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/notes`)
     setNotes(res.data);
   };
 
