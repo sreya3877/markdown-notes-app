@@ -1,38 +1,113 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* LOGIN */
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+}
+
+.login-box {
+  width: 320px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.password-box {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.eye {
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  background: #111827;
+  color: white;
+  padding: 16px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.note-item {
+  background: #1f2937;
+  padding: 12px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.note-item.active {
+  background: #2563eb;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+/* EDITOR */
+.editor {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.title {
+  padding: 14px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.split {
+  display: flex;
+  height: 100%;
+}
+
+.textarea {
+  width: 50%;
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+.preview {
+  width: 50%;
+  padding: 16px;
+  background: #f9fafb;
+}
+
+.save {
+  padding: 14px;
+  background: #2563eb;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
 }
